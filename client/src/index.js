@@ -3,25 +3,28 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter} from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import { AuthProvider } from './context/auth';
 import "antd/dist/reset.css";
 import { SearchProvider } from './context/search';
 import { CartProvider } from './context/cart';
+import { ThemeProvider } from './context/themeContext';
 // import '@fortawesome/fontawesome-free/css/all.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <AuthProvider>
-    <SearchProvider>
-      <BrowserRouter>
-      <CartProvider>
-        <App />
-        </CartProvider>
-      </BrowserRouter>
-    </SearchProvider>
-  </AuthProvider>
- 
+  <ThemeProvider>
+    <AuthProvider>
+      <SearchProvider>
+        <BrowserRouter>
+          <CartProvider>
+            <App />
+          </CartProvider>
+        </BrowserRouter>
+      </SearchProvider>
+    </AuthProvider>
+  </ThemeProvider>
+
 );
 
 // If you want to start measuring performance in your app, pass a function

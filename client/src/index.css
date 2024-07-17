@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,400;1,300&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -119,3 +120,86 @@
   color: black !important;
 }
 
+
+/* Colors for Dark Mode Starts From Here */
+
+
+
+:root {
+  --primary-color: #6c5ce7;
+  --secondary-color: #0984e3;
+  --background-light: #f0f0f0;
+  --background-dark: #222;
+  --text-light: #333;
+  --text-dark: #fff;
+  --accent-color: #fdcb6e;
+  /* Example accent color */
+
+  /* Gradient for background */
+  --gradient-light: linear-gradient(to right, #f0f0f0, #e0e0e0);
+  --gradient-dark: linear-gradient(to right, #333, #222);
+}
+
+body[data-theme="dark"] {
+  --background-color: var(--background-dark);
+  --text-color: var(--text-dark);
+  --gradient: var(--gradient-dark);
+}
+
+body {
+  --background-color: var(--background-light);
+  --text-color: var(--text-light);
+  --gradient: var(--gradient-light);
+}
+
+body {
+  background: var(--gradient);
+  /* Apply gradient as background */
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Additional styling for specific elements */
+.navbar {
+  background-color: var(--primary-color);
+  /* Example: Navbar background color */
+}
+
+.card {
+  background-color: var(--background-light);
+  color: var(--text-light);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Example: Box shadow */
+}
+
+.button {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+  background-color: darken(var(--secondary-color), 10%);
+}
+
+/* Dark mode specific styles */
+body[data-theme="dark"] {
+  --background-color: var(--background-dark);
+  --text-color: var(--text-dark);
+  --gradient: var(--gradient-dark);
+}
+
+.dark-theme {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+.light-theme {
+  background-color: var(--background-light);
+  color: var(--text-light);
+}
+
+/* Dark mode ends Here */

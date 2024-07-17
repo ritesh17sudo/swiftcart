@@ -35,7 +35,7 @@ app.use("/api/v1/product", productRoutes);
 
 app.get("/", (req, res) => {
   res.send({
-    message: "Welcome to green delight"
+    message: "Welcome to SwiftCart"
   })
 })
 

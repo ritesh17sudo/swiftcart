@@ -8,7 +8,7 @@ const Contact = () => {
                 <div className="col-md-6 ">
                     <img
                         src="/images/contactUs.jpg"
-                        // src="D:\React\Green-Delight\client\public\images\contactUs.jpg"
+                        // src="D:\React\SwiftCart\client\public\images\contactUs.jpg"
                         alt="contactus"
                         style={{ width: "100%" }}
                     />
@@ -20,13 +20,13 @@ const Contact = () => {
                         vaialible
                     </p>
                     <p className="mt-3">
-                        <BiMailSend /> : www.help@ecommerceapp.com
+                        <BiMailSend /> : https://ritesh-portfolio-five.vercel.app/
                     </p>
                     <p className="mt-3">
-                        <BiPhoneCall /> : 012-3456789
+                        <BiPhoneCall /> : 9031743720
                     </p>
                     <p className="mt-3">
-                        <BiSupport /> : 1800-0000-0000 (toll free)
+                        <BiSupport /> : 9031743720 (toll free)
                     </p>
                 </div>
             </div>
