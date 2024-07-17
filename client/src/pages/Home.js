@@ -53,26 +53,27 @@ const Home = () => {
   return (
     <Layout>
       <Carousel />
-       <h3 className="text-center">Top Products🔥</h3>
+      <h3 className="text-center">   🎆 New Arrivals  <img src="/images/cart.png" alt="Cart" style={{ width: '24px', height: '24px', marginRight: '5px' }} />
+      </h3>
       <div className="my-4">
         <Slider {...settings} className="mx-auto">
           {products.map((p) => (
             <div className="col" key={p._id}>
               {/* Product Card */}
               {/* <Link to={`/product/${p.slug}`} style={{ textDecoration: 'none' }}> */}
-                <div className="card custom-card mb-3" style={{ width: '300px', height: '450px' }}>
-                  <img src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`} className="card-img-top" alt={p.name} style={{ width: '100%', height: '60%' }} />
-                  <div className="card-body" style={{ height: '40%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                    <div>
-                      <h5 className="card-title" style={{ color: 'black' }}>{p.name}</h5>
-                      <p className="card-text" style={{ color: 'black' }}>{p.description.substring(0, 30)}...</p>
-                      <p className="card-text" style={{ color: 'black' }}> ₹ {p.price}</p>
-                    </div>
-                    {/* <button className="btn btn-sm btn-secondary" style={{ width: '100%', transition: 'transform 0.3s', transform: 'scale(1)' }} onClick={() => addtocart(p)}>
+              <div className="card custom-card mb-3" style={{ width: '300px', height: '450px' }}>
+                <img src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`} className="card-img-top" alt={p.name} style={{ width: '100%', height: '60%' }} />
+                <div className="card-body" style={{ height: '40%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                  <div>
+                    <h5 className="card-title" style={{ color: 'black' }}>{p.name}</h5>
+                    <p className="card-text" style={{ color: 'black' }}>{p.description.substring(0, 30)}...</p>
+                    <p className="card-text" style={{ color: 'black' }}> ₹ {p.price}</p>
+                  </div>
+                  {/* <button className="btn btn-sm btn-secondary" style={{ width: '100%', transition: 'transform 0.3s', transform: 'scale(1)' }} onClick={() => addtocart(p)}>
                                 <span role="img" aria-label="cart">🛒</span> Add to Cart
                             </button> */}
-                  </div>
                 </div>
+              </div>
               {/* </Link> */}
             </div>
           ))}

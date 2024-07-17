@@ -1,33 +1,27 @@
 import React from "react";
 import Layout from "./../components/Layout/Layout";
-import { BiMailSend, BiPhoneCall, BiSupport } from "react-icons/bi";
+import "./Contact.css"; // Ensure this file is created in the same directory
+
 const Contact = () => {
     return (
         <Layout title={'Contact us'}>
-            <div className="row contactus ">
-                <div className="col-md-6 ">
-                    <img
-                        src="/images/contactUs.jpg"
-                        // src="D:\React\SwiftCart\client\public\images\contactUs.jpg"
-                        alt="contactus"
-                        style={{ width: "100%" }}
-                    />
-                </div>
-                <div className="col-md-4">
-                    <h1 className="bg-dark p-2 text-white text-center">CONTACT US</h1>
-                    <p className="text-justify mt-2">
-                        any query and info about prodduct feel free to call anytime we 24X7
-                        vaialible
-                    </p>
-                    <p className="mt-3">
-                        <BiMailSend /> : https://ritesh-portfolio-five.vercel.app/
-                    </p>
-                    <p className="mt-3">
-                        <BiPhoneCall /> : 9031743720
-                    </p>
-                    <p className="mt-3">
-                        <BiSupport /> : 9031743720 (toll free)
-                    </p>
+            <div className="contact-container">
+                <form action="https://api.web3forms.com/submit" method="POST" className="contact-left">
+                    <div className="contact-left-title">
+                        <h2>Get in Touch</h2>
+                        <hr />
+                    </div>
+                    <input type="hidden" name="access_key" value="32e93b65-7aaa-4c5a-ad64-7db7971c9f86" />
+                    <input type="text" name="name" placeholder="Your Name" className="contact-inputs" required />
+                    <input type="email" name="email" placeholder="Your email" className="contact-inputs" required />
+                    <textarea name="message" placeholder="Your Message" className="contact-inputs" required></textarea>
+                    <button type="submit">
+                        submit
+                        <img src="/images/arrow_icon.png" alt="" />
+                    </button>
+                </form>
+                <div className="contact-right">
+                    <img src="/images/right_img.png" alt="" />
                 </div>
             </div>
         </Layout>

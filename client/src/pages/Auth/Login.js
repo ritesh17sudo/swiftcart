@@ -3,10 +3,6 @@ import Layout from "./../../components/Layout/Layout";
 import axios from "axios";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import toast from "react-hot-toast";
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
-
-// import "../../styles/AuthStyles.css";
 
 import { useAuth } from "../../context/auth";
 
@@ -20,7 +16,6 @@ const Login = () => {
 
     const location = useLocation();
 
-    // form function
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
@@ -48,7 +43,7 @@ const Login = () => {
 
     return (
         <Layout title="Login - Ecommerce App">
-            <div className="form-container ">
+            <div className="form-container">
                 <form onSubmit={handleSubmit}>
                     <h4 className="title">LOGIN FORM</h4>
                     <div className="mb-3">
@@ -73,22 +68,22 @@ const Login = () => {
                             id="password"
                             placeholder="Enter Your Password"
                             required
-                            autoComplete="current-password" // Add this line
+                            autoComplete="current-password"
                         />
                     </div>
 
-                    <button type="submit" className="btn btn-primary">
+                    <button type="submit" className="btn btn-primary" style={{ backgroundColor: '#0ec8e5' }}>
                         LOGIN
                     </button>
                     <p
                         style={{
-                            color: '#007bff', // Change the color to match your design
-                            cursor: 'pointer', // Change cursor to pointer to indicate it's clickable
-                            transition: 'color 0.3s ease', // Add a smooth transition effect for color change
-                            textDecoration: 'underline', // Underline the text
-                            display: 'inline', // Make sure it's displayed inline
-                            margin: '0', // Remove any default margins
-                            padding: '0', // Remove any default padding
+                            color: '#007bff',
+                            cursor: 'pointer',
+                            transition: 'color 0.3s ease',
+                            textDecoration: 'underline',
+                            display: 'inline',
+                            margin: '0',
+                            padding: '0',
                         }}
                         onClick={() => navigate('/forgot-password')}
                     >
@@ -97,7 +92,7 @@ const Login = () => {
 
                     <div className="links">
                         <p>Don't have an account? <Link to="/register">Register</Link></p>
-                        <p>By logging in, you agree to our <Link to="/policy">Privacy Policy</Link>.</p>
+                        <p>By logging in, you agree to our  <Link to="/policy">Privacy Policy</Link>.</p>
                     </div>
                 </form>
             </div>
@@ -105,4 +100,4 @@ const Login = () => {
     );
 };
 
-export default Login; 
+export default Login;

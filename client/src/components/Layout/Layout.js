@@ -30,9 +30,9 @@ const Layout = ({ children, title, description, keywords, author }) => {
 };
 
 Layout.defaultProps = {
-  title: 'Green Delight-Shop Now',
-  description: 'A marketplace to Get fresh Organic Farm Products at very Reasonable Cost',
-  keywords: 'food,farmer',
+  title: 'SwiftCart-Delivery in 10 Minutes',
+  description: 'A Quick Commerce site',
+  keywords: 'Quick Commerce',
   author: 'Ritesh Kumar',
 };
 

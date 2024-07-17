@@ -1,30 +1,28 @@
 import React from "react";
 import Layout from "./../components/Layout/Layout";
+import "./About.css";
 
 const About = () => {
     return (
-        <Layout title={'About Green Delight'}>
-            <div className="row contactus ">
-                <div className="col-md-6 ">
+        <Layout title={'About SwiftCart'}>
+            <div className="about-container">
+                <div className="image-container">
                     <img
                         src="\images\aboutUs.jpg"
                         alt="aboutus"
-                        style={{ width: "100%" }}
+                        className="about-image"
                     />
                 </div>
-                <div className="col-md-4">
-                    <p className="text-justify mt-2">
-                        <h2 >Welcome to Green Delight</h2>
-                        <p >
-                            Green Delight is your ultimate destination for high-quality organic farm products. We are committed to providing you with the freshest and most nutritious produce directly from our partner farms.
-                        </p>
-                        <p >
-                            Our mission is to promote sustainable agriculture and support local farmers while offering you a convenient way to access healthy and environmentally friendly products.
-                        </p>
-                        <p>
-                            We are a team of passionate individuals who have come together with the vision of creating a green environment for Consumers and Farmers
-                            Whether you're passionate about organic food or looking to make healthier choices for yourself and your family, Green Delight is here to cater to all your needs. Join us in our journey towards a greener and healthier future!
-                        </p>
+                <div className="text-container">
+                    <h2 className="about-title">Welcome to SwiftCart</h2>
+                    <p className="about-description">
+                        SwiftCart is your go-to platform for getting your products delivered within 10 minutes. We are dedicated to providing you with a fast and convenient shopping experience.
+                    </p>
+                    <p className="about-description">
+                        Our mission is to revolutionize the way you shop by bringing your favorite products to your doorstep in record time.
+                    </p>
+                    <p className="about-description">
+                        We are a team of enthusiastic individuals committed to making your life easier with quick and reliable delivery services. Whether you're in need of groceries, household items, or any other products, SwiftCart ensures that you receive them in just 10 minutes. Join us and experience the future of shopping!
                     </p>
                 </div>
             </div>

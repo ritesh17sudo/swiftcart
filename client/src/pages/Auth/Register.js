@@ -117,8 +117,8 @@ const Register = () => {
                             placeholder="What is your childhood NickName?"
                         />
                     </div>
-                    <button type="submit" className="btn btn-primary">
-                        REGISTER
+                    <button type="submit" className="btn btn-primary" style={{ backgroundColor: '#0ec8e5' }}>
+                        Register
                     </button>
                     <div className="links">
                         <p>Already have an account? <Link to="/login">Sign in</Link></p>
