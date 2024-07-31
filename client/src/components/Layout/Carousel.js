@@ -13,9 +13,9 @@ export default function Carousel() {
             <img style={{
               "filter": "brightness(80%)",
               "maxHeight": "500px", "objectFit": "cover"
-            }} src="/images/pic3.jpg" className="d-block w-100" alt="..." />
+            }} src="/images/pic4.jpg" className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
-              <h5>Try Premium range of Organic Products</h5>
+              {/* <h5>FASHION.TRENDING.STYLE</h5> */}
 
             </div>
           </div>
@@ -26,19 +26,24 @@ export default function Carousel() {
               "maxHeight": "500px", "objectFit": "cover"
             }} className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
-              <h5>Buy Organic and Fresh Products Online</h5>
+              {/* <h5>Buy Trendy Products</h5> */}
             </div>
           </div>
+
+
           <div className="carousel-item">
             <img style={{
               "filter": "brightness(80%)",
               "maxHeight": "500px", "objectFit": "cover"
             }} src="/images/pic2.jpg" className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
-              <h5>Connect with your Trustable Farmer</h5>
+              {/* <h5>Best Quality</h5> */}
             </div>
           </div>
         </div>
+
+
+
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
           <span className="carousel-control-prev-icon" aria-hidden="true"></span>
           <span className="visually-hidden">Previous</span>

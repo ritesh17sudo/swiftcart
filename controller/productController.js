@@ -34,11 +34,13 @@ export const createProductController = async (req, res) => {
         return res.status(500).send({ error: "Category is Required" });
       case !quantity:
         return res.status(500).send({ error: "Quantity is Required" });
+      // 1 MB = 1,024 * 1,024 bytes = 1,048,576 bytes
       case photo && photo.size > 1000000:
         return res
           .status(500)
           .send({ error: "photo is Required and should be less then 1mb" });
     }
+
 
     const products = new productModel({ ...req.fields, slug: slugify(name) });
     if (photo) {
@@ -143,7 +145,7 @@ export const deleteProductController = async (req, res) => {
   }
 };
 
-//upate product
+//update product
 export const updateProductController = async (req, res) => {
   try {
     const { name, description, price, category, quantity } =
@@ -266,6 +268,7 @@ export const searchProductController = async (req, res) => {
     const results = await productModel
       .find({
         $or: [
+          // Here i is written to make it case insensitive
           { name: { $regex: keyword, $options: "i" } },
           { description: { $regex: keyword, $options: "i" } },
         ],

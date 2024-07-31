@@ -22,10 +22,10 @@ const CartPage = () => {
       cart?.map((item) => {
         total = total + item.price;
       });
-      return  total.toLocaleString("en-IN", {
-      style: "currency",
-      currency: "INR",
-    });
+      return total.toLocaleString("en-IN", {
+        style: "currency",
+        currency: "INR",
+      });
     } catch (error) {
       console.log(error);
     }
@@ -85,16 +85,15 @@ const CartPage = () => {
             </h1>
             <h4 className="text-center">
               {cart?.length
-                ? `You Have ${cart.length} items in your cart ${
-                    auth?.token ? "" : "please login to checkout"
-                  }`
+                ? `You Have ${cart.length} items in your cart ${auth?.token ? "" : "please login to checkout"
+                }`
                 : " Your Cart Is Empty"}
             </h4>
           </div>
         </div>
         <div className="row">
           <div className="col-md-8">
-            {cart?.map((p,index) => (
+            {cart?.map((p, index) => (
               <div className="row mb-2 p-3 card flex-row" key={index}>
                 <div className="col-md-4">
                   <img

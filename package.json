@@ -1,7 +1,7 @@
 {
-  "name": "SwiftCart",
+  "name": "swiftcart",
   "version": "1.0.0",
-  "description": "Green Delight rest api",
+  "description": "SwiftCart rest api",
   "main": "server.js",
   "type": "module",
   "scripts": {

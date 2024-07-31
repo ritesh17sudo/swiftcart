@@ -16,8 +16,8 @@ const AdminDashboard = () => {
                     <div className="col-md-9">
                         <div className="card p-4">
                             <h1 className="mb-4">Hello, {auth?.user?.name}!</h1>
-                            <p className="mb-3">Welcome to your admin dashboard.</p>
-                            <p className="mb-3">Here you can manage your store efficiently.</p>
+                            <p className="mb-3">Welcome🎉</p>
+                            <p className="mb-3">Manage your Store</p>
                             <div className="card border-0">
                                 <div className="card-body">
                                     <h5 className="card-title">Your Information</h5>
