@@ -17,7 +17,7 @@ const Footer = () => {
             <div className="wave" id="wave1"></div>
             <div className="footer-content">
                 <div className="footer-section about">
-                    <h1 className="logo-text">SwiftCart</h1>
+                    <h1 className="logo-text">Green Delight</h1>
                     <p>Get Your Products delivered within 10 Minutes 🔥</p>
                     <div className="social-icons">
                         <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
@@ -66,7 +66,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="footer-bottom">
-                <p>&copy; {new Date().getFullYear()} SwiftCart. All Rights Reserved.</p>
+                <p>&copy; {new Date().getFullYear()} Green Delight. All Rights Reserved.</p>
             </div>
         </div>
     );

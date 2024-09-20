@@ -8,7 +8,7 @@ const Policy = () => {
             <div className="policy-container">
                 <h2 className="policy-title">Privacy Policy</h2>
                 <p className="policy-text">
-                    At SwiftCart, we take your privacy seriously. This Privacy Policy outlines the types of personal information we collect and how we use it. By using our website, you consent to the collection and use of your information as described in this policy.
+                    At Green Delight, we take your privacy seriously. This Privacy Policy outlines the types of personal information we collect and how we use it. By using our website, you consent to the collection and use of your information as described in this policy.
                 </p>
                 <h3 className="policy-heading">Information We Collect</h3>
                 <p className="policy-text">
@@ -27,7 +27,7 @@ const Policy = () => {
                     We reserve the right to update or modify this Privacy Policy at any time. Any changes will be effective immediately upon posting on this page. We encourage you to review this policy periodically for any updates.
                 </p>
                 <p className="policy-text">
-                    If you have any questions or concerns about our Privacy Policy, please contact us at privacy@swiftcart.com.
+                    If you have any questions or concerns about our Privacy Policy, please contact us at privacy@Green Delight.com.
                 </p>
             </div>
         </Layout>

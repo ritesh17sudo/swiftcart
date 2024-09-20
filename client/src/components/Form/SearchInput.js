@@ -5,19 +5,20 @@ import { useNavigate } from "react-router-dom";
 const SearchInput = () => {
   const [values, setValues] = useSearch();
   const navigate = useNavigate();
- const [loading,setloading]=useState(false);
+  const [loading, setloading] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {           
+    try {
       const { data } = await axios.get(
         `${process.env.REACT_APP_API}/api/v1/product/search/${values.keyword}`
       );
-      setValues({ ...values, results: data ,keyword: "" });
+      setValues({ ...values, results: data, keyword: "" });
       navigate("/Search");
     } catch (error) {
       console.log(error);
     }
   };
+
   return (
     <div>
       <form className="d-flex" role="search" onSubmit={handleSubmit}>

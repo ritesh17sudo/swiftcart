@@ -7,7 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import "../../styles/AuthStyles.css";
-// D:\React\SwiftCart\client\styles\AuthStyles.css
+// D:\React\Green Delight\client\styles\AuthStyles.css
 
 const Register = () => {
     const [name, setName] = useState("");
