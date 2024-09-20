@@ -30,7 +30,7 @@ const Layout = ({ children, title, description, keywords, author }) => {
 };
 
 Layout.defaultProps = {
-  title: 'Green Delight-Delivery in 10 Minutes',
+  title: 'SwiftCart-Delivery in 10 Minutes',
   description: 'A Quick Commerce site',
   keywords: 'Quick Commerce',
   author: 'Ritesh Kumar',

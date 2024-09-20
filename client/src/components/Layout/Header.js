@@ -46,7 +46,7 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <Link to="/" className="navbar-brand">
               <img src="/images/cart.png" alt="Cart" style={{ width: '24px', height: '24px', marginRight: '5px' }} />
-              Green Delight ग्रीन डिलाइट
+              SwiftCart ग्रीन डिलाइट
             </Link>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <SearchInput />
