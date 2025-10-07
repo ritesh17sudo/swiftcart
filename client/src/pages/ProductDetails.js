@@ -66,14 +66,26 @@ const ProductDetails = () => {
             },
         ],
     };
- const addtocart=(p) => {
-                      setCart([...cart, p]);
-                      localStorage.setItem(
-                        "cart",
-                        JSON.stringify([...cart, p])
-                      );
-                      toast.success("Item Added to cart");
-                    };
+  const addToCart = (product) => {
+    const existingProduct = cart.find((p) => p._id === product._id);
+    if (existingProduct) {
+      // If the product is already in the cart, increase quantity
+      const updatedCart = cart.map((p) =>
+        p._id === product._id
+          ? { ...p, quantity: p.quantity ? p.quantity + 1 : 2 }
+          : p
+      );
+      setCart(updatedCart);
+      localStorage.setItem('cart', JSON.stringify(updatedCart));
+    } else {
+      // If the product is not in the cart, add it
+      const newProduct = { ...product, quantity: 1 };
+      const updatedCart = [...cart, newProduct];
+      setCart(updatedCart);
+      localStorage.setItem('cart', JSON.stringify(updatedCart));
+    }
+    toast.success('Item Added to Cart');
+  };
                     
     return (
         <Layout>
@@ -94,7 +106,7 @@ const ProductDetails = () => {
                         <p>Category: {product?.category?.name}</p>
                         <p>Quantity: {product.quantity}</p>
                         <p>Shipping: {product.shipping}</p>
-                        <button className="btn btn-lg btn-secondary my-3" style={{ width: '100%', transition: 'transform 0.3s', transform: 'scale(1)' }}onClick={()=>addtocart(product)}>
+                        <button className="btn btn-lg btn-secondary my-3" style={{ width: '100%', transition: 'transform 0.3s', transform: 'scale(1)' }}onClick={()=>addToCart(product)}>
                             <span role="img" aria-label="cart"  >🛒</span> Add to Cart
                         </button>
                     </div>
@@ -117,7 +129,7 @@ const ProductDetails = () => {
                                 <p className="card-text" style={{ color: 'black' }}>{p.description.substring(0, 30)}...</p>
                                 <p className="card-text" style={{ color: 'black' }}> ₹ {p.price}</p>
                             </div>
-                            <button className="btn btn-sm btn-secondary" style={{ width: '100%', transition: 'transform 0.3s', transform: 'scale(1)' }} onClick={() => addtocart(p)}>
+                            <button className="btn btn-sm btn-secondary" style={{ width: '100%', transition: 'transform 0.3s', transform: 'scale(1)' }} onClick={() => addToCart(p)}>
                                 <span role="img" aria-label="cart">🛒</span> Add to Cart
                             </button>
                         </div>
@@ -140,7 +152,7 @@ const ProductDetails = () => {
                                 <p className="card-text" style={{ color: 'black' }}>{p.description.substring(0, 30)}...</p>
                                 <p className="card-text" style={{ color: 'black' }}> ₹ {p.price}</p>
                             </div>
-                            <button className="btn btn-sm btn-secondary" style={{ width: '100%', transition: 'transform 0.3s', transform: 'scale(1)' }} onClick={() => addtocart(p)}>
+                            <button className="btn btn-sm btn-secondary" style={{ width: '100%', transition: 'transform 0.3s', transform: 'scale(1)' }} onClick={() => addToCart(p)}>
                                 <span role="img" aria-label="cart">🛒</span> Add to Cart
                             </button>
                         </div>
